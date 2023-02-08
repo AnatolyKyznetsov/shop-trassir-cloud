@@ -1,0 +1,207 @@
+.compare {
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+
+    &__head-tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    &__select {
+        max-width: 400px;
+    }
+
+    &__cards {
+        margin-bottom: 48px;
+        position: sticky;
+        top: 84px;
+        background: var(--bg-second);
+        z-index: 2;
+        padding-top: 32px;
+        display: flex;
+        justify-content: space-between;
+
+        .slider-scrollbar {
+            bottom: 6px;
+        } 
+
+        .catalog-card__name,
+        .catalog-card__img,
+        .catalog-card {
+            transition: .2s linear;
+        }
+
+        &.is-sticky {
+            margin-bottom: 80px;
+            
+            .catalog-card {
+                padding: 12px;
+                flex-direction: row;
+                gap: 8px;
+            }
+
+            .catalog-card__img {
+                height: 65px;
+                width: 65px;
+                margin: 0;
+                overflow: hidden;
+                flex-shrink: 0;
+            }
+
+            .catalog-card__name {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            .catalog-card__tool,
+            .catalog-card__bottom {
+                display: none;
+            }
+            
+            .catalog-card__content {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+            }
+        }
+    }
+
+    &__cards-fixed {
+        display: flex;
+        gap: 32px;
+        flex-shrink: 0;
+        margin-right: 32px;
+        padding-bottom: 32px;
+
+        &:empty {
+            margin-right: 0;
+        }
+    }
+
+    &__cards-wrapper {
+        display: flex;
+        width: 100%;
+        padding-bottom: 32px;
+    }
+
+    &__characteristics-selected {
+        margin-bottom: 80px;
+    }
+
+    &__line {
+        overflow: hidden;
+        padding: 20px 0;
+        cursor: pointer;
+        transition: .2s linear;
+        border-bottom: 1px solid #3D3D3D;
+        cursor: pointer;
+
+        &.is-hidden {
+            display: none;
+        }
+
+        .custom-input {
+            margin-left: 16px;
+        }
+        
+
+        &:hover {
+            background: var(--bg-main);
+        }
+
+        &_empty {
+            pointer-events: none;
+            padding-left: 20px;
+            height: 114px;
+            display: flex;
+            align-items: center;
+            background: var(--bg-main);
+
+            &:not(:only-child) {
+                display: none;
+            }
+        }
+    }
+
+    &__line-wrapper {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &__line-fixed {
+        display: flex;
+        gap: 32px;
+        flex-shrink: 0;
+        margin-right: 32px;
+
+        &:empty {
+            margin-right: 0;
+        }
+    }
+
+    &__line-slider {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__line-inner {
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__line-item {
+        width: 282px;
+        justify-content: center;
+        min-height: 32px;
+        padding: 0px 16px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    &__drop-head {
+        cursor: pointer;
+        padding-right: 48px;
+        position: relative;
+        transition: .2s linear;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg);
+            right: 8px;
+            background: url('./images/icons/arrow-down.svg') no-repeat center;
+            position: absolute;
+            transition: .2s linear;
+        }
+
+        &.is-closed {
+            margin-bottom: 0;
+
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+
+    &__drop-body {
+        transition: .2s linear;
+        overflow: hidden;
+
+        &.is-closed {
+            margin: 0;
+            padding: 0;
+            max-height: 0;
+        }
+    }
+}

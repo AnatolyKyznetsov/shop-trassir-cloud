@@ -1,0 +1,13 @@
+.slider-scrollbar {
+    height: 4px;
+    background: #242627;
+    left: 0;
+    bottom: 2px;
+
+    .swiper-scrollbar-drag {
+        background: #AFAFAF;
+        height: 8px;
+        top: -50%;
+        cursor: grab;
+    }
+}

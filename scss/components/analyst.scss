@@ -1,0 +1,34 @@
+.analyst {
+    &__slider-wrapper {
+        position: relative;
+    }
+
+    &__slider {
+        padding-bottom: 32px;
+        overflow: visible;
+    }
+
+
+
+    .picture-card {
+        user-select: none;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .analyst {
+        &__slider {
+            overflow: visible;
+
+            .picture-card {
+                background-position: center top;
+                height: 162px;
+                width: 330px;
+            }
+        }
+    }     
+}

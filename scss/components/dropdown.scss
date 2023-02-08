@@ -1,0 +1,106 @@
+.dropdown {
+    width: 568px;
+    padding: 32px 24px;
+    background: var(--color-white);
+    box-shadow: 0px 0px 40px #{HexToRGBA($color-conv-light, 0.3)};
+    border-radius: var(--radius-standard);
+    position: absolute;
+    z-index: 11;
+    transition: .2s linear;
+    opacity: 0;
+    pointer-events: none;
+
+    .simplebar-track {
+        right: -22px;
+    }
+
+    &__name {
+        text-align: center;
+        color: #151515;
+        padding-bottom: 25px;
+        display: block;
+        border-bottom: 1px solid rgba(199, 199, 199, .5);
+        margin-bottom: 0;
+    }
+
+    &__content {
+        max-height: 338px;
+    }
+    
+    &__footer {
+        margin-top: 40px;
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__price-all {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        color: #3D3D3D;
+
+        span {
+            font-weight: 600;
+            font-size: 24px;
+            color: #151515;
+        }
+
+    }
+
+    &-product {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        padding: 24px 0;
+        position: relative;
+        border-bottom: 1px solid rgba(199, 199, 199, .5);
+
+        .close {
+            right: 7px;
+            top: 22px;
+        }
+    }
+
+    &-product__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 120px;
+        max-width: 320px;
+        gap: 16px;
+    }
+
+    &-product__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    &-product__name {
+        font-weight: 500;
+    }
+
+    &-product__img {
+        width: 120px;
+        height: 120px;
+        padding: 12px;
+
+        img {
+            max-height: 100%;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .dropdown {
+        display: none;
+    }
+}

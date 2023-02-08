@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trassir Cloud Shop</title>
+
+    <!-- /bitrix/css/main/font-awesome.min.css -->
+    <link rel="stylesheet" href="./local/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./local/css/select2.min.css">
+    <link rel="stylesheet" href="./local/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./local/css/simplebar.min.css">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="app" style="padding: 50px; gap: 32px; flex-direction: row; justify-content: start; align-items: flex-start;">
+    <!-- Карточка большая. Используется в слайдере -->
+    <div class="catalog-card js-catalogCard">
+        <div class="catalog-card__content">
+            <div class="icon-button icon-button__standard catalog-card__tool catalog-card__tool_left">
+                <svg class="icon">
+                    <use xlink:href="./images/sprite.svg#heart"></use>
+                </svg>
+            </div>
+            <div class="icon-button icon-button__standard catalog-card__tool catalog-card__tool_right">
+                <svg class="icon">
+                    <use xlink:href="./images/sprite.svg#convertshape"></use>
+                </svg>
+            </div>
+            <div class="catalog-card__img">
+                <img src="https://front.trassir.ru/upload/iblock/d5a/oxi8s9yg51lb1ybnuo6divx7iv7qn786/ff35574a-00c2-11ec-dd9a-6805ca3d85d7_0e07f4a6-1551-11ec-4d8d-6805ca3d85d7.resize1.jpg" alt="">
+            </div>
+            <a href="javascript:void(0)" class="link link_dark catalog-card__name">
+                Комплект облачного видеонаблюдения TRASSIR Cloud «Outdoor»
+            </a>
+            <div class="catalog-card__tags">
+                <div class="catalog-card-tag catalog-card-tag_hit">
+                    <img src="./images/icons/crown.svg" alt="">
+                    ХИТ
+                </div>
+                <div class="catalog-card-tag catalog-card-tag_sale">
+                    –12%
+                </div>
+            </div>
+            <ul class="catalog-card__options">
+                <li class="catalog-card__option text-small">
+                    <img src="./images/icons/wifi.svg" alt="" class="catalog-card__option-icon">
+                    Wi-Fi модуль
+                </li>
+                <li class="catalog-card__option text-small">
+                    <img src="./images/icons/microphone.svg" alt="" class="catalog-card__option-icon">
+                    Встроенный микрофон
+                </li>
+                <li class="catalog-card__option text-small">
+                    <img src="./images/icons/scan.svg" alt="" class="catalog-card__option-icon">
+                    Встроенная видеоаналитика
+                </li>
+                <li class="catalog-card__option text-small">
+                    <img src="./images/icons/moon.svg" alt="" class="catalog-card__option-icon">
+                    ИК подсветка до 10 м
+                </li>
+            </ul>
+        </div>
+        <div class="catalog-card__bottom">
+            <div class="prices-block">
+                <div class="prices-block__top">
+                    <span class="prices-block__value prices-block__value_crossed">
+                        4 050₽
+                    </span>
+                    <span class="prices-block__value">
+                        - 500₽
+                    </span>
+                </div>
+                <span class="prices-block__value">
+                    3 550₽
+                </span>
+            </div>
+            <div class="button button__conversion offer__button catalog-card__add js-catalogCardAdd">
+                <img src="./images/icons/shopping-cart.svg" alt="">
+                В корзину
+            </div>
+
+            <div class="counter">
+                <div class="icon-button icon-button__standard js-counterMinus">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#minus"></use>
+                    </svg>
+                </div>
+
+                <input type="text" class="counter__input js-counterInput" value="0" data-product_id="">
+                <div class="icon-button icon-button__standard js-counterPluse">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#add"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Карточка маленькая. Используется в каталоге -->
+    <!-- добавляется .catalog-card_mini -->
+    <div class="catalog-card catalog-card_mini js-catalogCard">
+        <div class="catalog-card__content">
+            <div class="icon-button icon-button__standard catalog-card__tool catalog-card__tool_left">
+                <svg class="icon">
+                    <use xlink:href="./images/sprite.svg#heart"></use>
+                </svg>
+            </div>
+            <div class="icon-button icon-button__standard catalog-card__tool catalog-card__tool_right">
+                <svg class="icon">
+                    <use xlink:href="./images/sprite.svg#convertshape"></use>
+                </svg>
+            </div>
+            <div class="catalog-card__img">
+                <img src="https://front.trassir.ru/upload/iblock/d5a/oxi8s9yg51lb1ybnuo6divx7iv7qn786/ff35574a-00c2-11ec-dd9a-6805ca3d85d7_0e07f4a6-1551-11ec-4d8d-6805ca3d85d7.resize1.jpg" alt="">
+            </div>
+            <a href="javascript:void(0)" class="link link_dark catalog-card__name">
+                Комплект облачного видеонаблюдения TRASSIR Cloud «Outdoor»
+            </a>
+            <div class="catalog-card__tags">
+                <div class="catalog-card-tag catalog-card-tag_hit">
+                    <img src="./images/icons/crown.svg" alt="">
+                    ХИТ
+                </div>
+                <div class="catalog-card-tag catalog-card-tag_sale">
+                    –12%
+                </div>
+            </div>
+            <ul class="catalog-card__options">
+                <li class="catalog-card__option text-small">
+                    <img src="./images/icons/wifi.svg" alt="" class="catalog-card__option-icon">
+                    Wi-Fi модуль
+                </li>
+                <li class="catalog-card__option text-small">
+                    <img src="./images/icons/microphone.svg" alt="" class="catalog-card__option-icon">
+                    Встроенный микрофон
+                </li>
+                <li class="catalog-card__option text-small">
+                    <img src="./images/icons/scan.svg" alt="" class="catalog-card__option-icon">
+                    Встроенная видеоаналитика
+                </li>
+                <li class="catalog-card__option text-small">
+                    <img src="./images/icons/moon.svg" alt="" class="catalog-card__option-icon">
+                    ИК подсветка до 10 м
+                </li>
+            </ul>
+        </div>
+        <div class="catalog-card__bottom">
+            <div class="prices-block">
+                <div class="prices-block__top">
+                    <span class="prices-block__value prices-block__value_crossed">
+                        4 050₽
+                    </span>
+                    <span class="prices-block__value">
+                        - 500₽
+                    </span>
+                </div>
+                <span class="prices-block__value">
+                    3 550₽
+                </span>
+            </div>
+            <div class="button button__conversion offer__button catalog-card__add js-catalogCardAdd">
+                <img src="./images/icons/shopping-cart.svg" alt="">
+                В корзину
+            </div>
+            <div class="counter">
+                <div class="icon-button icon-button__standard js-counterMinus">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#minus"></use>
+                    </svg>
+                </div>
+
+                <input type="text" class="counter__input js-counterInput" value="0" data-product_id="">
+                <div class="icon-button icon-button__standard js-counterPluse">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#add"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Карточка для страницы сравнения -->
+    <!-- .catalog-card__tags и .catalog-card__options пропадает -->
+    <!-- добавляется .catalog-card_compare -->
+    <!-- Иконка сравения меняется под ней добавляется иконка с пином -->
+    <div class="catalog-card js-catalogCard catalog-card_compare">
+        <div class="catalog-card__content">
+            <div class="icon-button icon-button__standard catalog-card__tool catalog-card__tool_left">
+                <svg class="icon">
+                    <use xlink:href="./images/sprite.svg#heart"></use>
+                </svg>
+            </div>
+            <div class="icon-button icon-button__standard catalog-card__tool catalog-card__tool_right js-compareSlideRemove">
+                <svg class="icon">
+                    <use xlink:href="./images/sprite.svg#trash"></use>
+                </svg>
+            </div>
+            <div class="icon-button icon-button__standard catalog-card__tool catalog-card__tool_right catalog-card__tool_right-second catalog-card__tool_pin js-compareSlidePin">
+                <svg class="icon icon_fill">
+                    <use xlink:href="./images/sprite.svg#pin"></use>
+                </svg>
+            </div>
+            <div class="catalog-card__img">
+                <img src="https://front.trassir.ru/upload/iblock/d5a/oxi8s9yg51lb1ybnuo6divx7iv7qn786/ff35574a-00c2-11ec-dd9a-6805ca3d85d7_0e07f4a6-1551-11ec-4d8d-6805ca3d85d7.resize1.jpg" alt="">
+            </div>
+            <a href="javascript:void(0)" class="link link_dark catalog-card__name">
+                Комплект облачного видеонаблюдения TRASSIR Cloud «Outdoor»
+            </a>
+        </div>
+        <div class="catalog-card__bottom">
+            <div class="prices-block">
+                <div class="prices-block__top">
+                    <span class="prices-block__value prices-block__value_crossed">
+                        4 050₽
+                    </span>
+                    <span class="prices-block__value">
+                        - 500₽
+                    </span>
+                </div>
+                <span class="prices-block__value">
+                    3 550₽
+                </span>
+            </div>
+            <div class="button button__conversion offer__button catalog-card__add js-catalogCardAdd">
+                <img src="./images/icons/shopping-cart.svg" alt="">
+                В корзину
+            </div>
+
+            <div class="counter">
+                <div class="icon-button icon-button__standard js-counterMinus">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#minus"></use>
+                    </svg>
+                </div>
+
+                <input type="text" class="counter__input js-counterInput" value="0" data-product_id="">
+                <div class="icon-button icon-button__standard js-counterPluse">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#add"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="./local/js/select2.min.js"></script>
+<script src="./local/js/simplebar.min.js"></script>
+<script src="./local/js/swiper-bundle.min.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/cards.js"></script>
+</body>
+</html>
+                        

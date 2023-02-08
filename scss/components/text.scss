@@ -1,0 +1,48 @@
+.text-large {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.45;
+    margin-bottom: 12px;
+    color: var(--color-white);
+    letter-spacing: 0.02em;
+
+    &_bold {
+        font-weight: 600;
+    }
+}
+
+.text-standard {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.02em;    
+    color: var(--color-white);
+    margin-bottom: 12px;
+}
+
+.text-small {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.38;
+    letter-spacing: 0.02em;    
+    color: var(--color-white);
+    margin-bottom: 12px;
+
+    &_xs {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .text-large {
+        font-size: 16px; 
+    }
+
+    .text-standard {
+        font-size: 14px;
+    }
+
+    .text-small {
+        font-size: 12px;
+    }
+}

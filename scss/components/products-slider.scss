@@ -1,0 +1,26 @@
+.products-slider {
+    &__block {
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+
+    &__slider {
+        overflow: visible;
+        padding-bottom: 40px;
+    }
+
+    .catalog-card {
+        user-select: none;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .products-slide {
+        &__slider {
+            padding-bottom: 32px;
+        }
+    }
+}

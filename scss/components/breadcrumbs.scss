@@ -1,0 +1,31 @@
+.breadcrumbs {
+    padding-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 8px 32px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    & + .main > .section:first-child {
+        padding-top: 0;
+    }
+
+    a.link {
+        position: relative;
+
+        &:after {
+            content: '/';
+            display: block;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -19px;
+            color: var(--color-white) !important;
+        }
+    }
+}

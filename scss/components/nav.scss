@@ -1,0 +1,131 @@
+.nav {
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+        margin-top: -3px;
+    }
+}
+
+.nav-icons {
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    &__item {
+        position: relative;
+
+        &[data-num]:after {
+            content: attr(data-num);
+            display: block;
+            position: absolute;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.42;
+            color: var(--color-white);
+            background: var(--color-conv-dark);
+            border-radius: var(--radius-standard);
+            padding: 0px 8px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            left: 17px;
+            top: -19px;
+        }
+
+        &_dropdown {
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 150px;
+                height: 35px;
+                position: absolute;
+                bottom: -35px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: url('./images/icons/dropdown-tail.svg') no-repeat center bottom;
+                transition: .2s linear;
+                opacity: 0;
+                pointer-events: none;
+                z-index: 12;
+            }
+
+            .dropdown {
+                right: -90px;
+                top: 58px;
+            }
+
+            &:hover {
+                overflow: visible;
+
+                &::before,
+                .dropdown {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+        }
+    }
+
+    &__name {
+        display: none;
+        line-height: 1.38;
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .nav {
+        padding-top: 30px;
+
+        &__list {
+            flex-direction: column;
+            gap: 37px
+        }
+    }
+
+    .nav-icons {
+        width: 100%;
+        order: -1;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #3D3D3D;
+
+        &__list {
+            flex-direction: column;
+            gap: 37px
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            &_dropdown {
+                &::before {
+                    display: none;
+                }
+            }
+
+            &_cart,
+            &_search {
+                display: none;
+            }
+
+            &_profile {
+                order: -1;
+            }
+
+            &[data-num]:after {
+                position: static;
+            }
+        }
+
+        &__name {
+            display: block;
+        }
+    }
+}

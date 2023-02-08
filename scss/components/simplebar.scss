@@ -1,0 +1,32 @@
+.simplebar {
+    &-scrollbar {
+        cursor: grab;
+
+        &:before {
+            background: #DADADA;
+        }
+    }
+
+    &-track {
+        &.simplebar-vertical {
+            .simplebar-scrollbar {
+                &:before {
+                    top: 26px !important;
+                    bottom: 26px !important;
+                }
+            }
+        }
+    }
+}
+
+.dark-simplebar {
+    .simplebar {
+        &-scrollbar {
+            cursor: grab;
+
+            &:before {
+                background: var(--color-conv-lightness);
+            }
+        }
+    }
+}

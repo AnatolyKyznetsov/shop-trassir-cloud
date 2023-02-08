@@ -1,0 +1,71 @@
+@function HexToRGBA($hex, $alpha) { // #{HexToRGBA($color-main-darkness, 0.3)}
+    @return rgba(red($hex), green($hex), blue($hex), $alpha);
+}
+
+// Colors
+$color-white: #FFFFFF;
+
+$bg-main: #1E1F20;
+$bg-second: #151515;
+
+$color-conv-lightness: #B29FFC;
+$color-conv-light: #7367F0;
+$color-conv-dark: #4D4694;
+
+$color-success: #33CC00;
+$color-warning: #FBBD00;
+$color-error: #EA0F0F;
+
+$color-disabled-middle: #969696;
+
+// Media
+$lg: 1280px;
+$md: 992px;
+$sm: 576px;
+
+:root {
+    // Fonts
+    --font-main: 'Roboto', sans-serif;
+    --font-second: var(--font-main);
+
+    --font-weight-standard: 400;
+
+    // Colors
+    // --color-white: $color-white;
+
+    // --bg-main: $bg-main;
+    // --bg-second: $bg-second;
+
+    // --color-conv-lightness: $color-conv-lightness;
+    // --color-conv-light: $color-conv-light;
+    // --color-conv-dark: $color-conv-dark;
+
+    // --color-success: $color-success;
+    // --color-warning: $color-warning;
+    // --color-error: $color-error;
+
+    // --color-disabled-middle: $color-disabled-middle;
+
+    --color-white: #FFFFFF;
+
+    --bg-main: #1E1F20;
+    --bg-second: #151515;
+
+    --color-conv-lightness: #B29FFC;
+    --color-conv-light: #7367F0;
+    --color-conv-dark: #4D4694;
+    
+    --color-success: #33CC00;
+    --color-warning: #FBBD00;
+    --color-error: #EA0F0F;
+    
+    --color-disabled-middle: #969696;
+
+    // Border radius
+    --radius-standard: 32px;
+}
+
+
+$color-conv-second-dark: #FFFFFF;
+$color-main-light: #FFFFFF;
+$color-main-darkness: #FFFFFF;

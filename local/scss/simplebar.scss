@@ -1,0 +1,40 @@
+.simplebar {
+    &-content {
+        &:after,
+        &:before {
+            display: none;
+        }
+    }
+
+    &-track {
+        pointer-events: auto;
+
+        &.simplebar-horizontal {
+            .simplebar-scrollbar {
+                &:before {
+                    height: 6px !important;
+                    left: 12px !important;
+                    right: 12px !important;
+                }
+            }
+        }
+
+        &.simplebar-vertical {
+            .simplebar-scrollbar {
+                &:before {
+                    width: 6px !important;
+                    top: 12px !important;
+                    bottom: 12px !important;
+                }
+            }
+        }
+    }
+
+    &-scrollbar {
+        cursor: grab;
+
+        &:before {
+            background: #{HexToRGBA($color-conv-second-dark, 0.5)};
+        }
+    }
+}

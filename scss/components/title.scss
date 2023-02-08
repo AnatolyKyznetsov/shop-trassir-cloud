@@ -1,0 +1,49 @@
+.title {
+    &__main {
+        line-height: 1.2;
+        font-weight: 500;
+        font-size: 40px;
+        letter-spacing: 0.02em;
+        margin-bottom: 40px;
+
+        & + .subtitle {
+            margin-top: -24px;
+        }
+
+        & + .main > .section:first-child {
+            padding-top: 0;
+        }
+    }
+
+    &__section {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1.44;
+        letter-spacing: 0.02em;
+        color: var(--color-white);
+        margin-bottom: 40px;
+    }
+
+    // &__block {
+
+    // }
+}
+
+@media screen and (max-width: $sm) {
+    .title {
+        &__main {
+            font-size: 28px;
+            // остальное дописать
+        }
+
+        &__section {
+            line-height: 1.33;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        // &__block {
+
+        // }
+    }
+}

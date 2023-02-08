@@ -1,0 +1,87 @@
+.select2 {
+    width: 100% !important;
+
+    &.select2-container {
+        &--open {
+            .select2-selection {
+                .select2-selection__arrow {
+                    transform: scale(-1);
+                }
+            }
+        }
+    }
+
+    .select2-selection {
+        background: #3D3D3D;
+        border-radius: var(--radius-standard) !important;
+        border: 1px solid #969696;
+
+        &--single {
+            height: 54px;
+    
+            .select2-selection__rendered {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 0.02em;                
+                color: var(--color-white);
+                padding: 0px 46px 0px 16px;
+            }
+    
+            .select2-selection__arrow {
+                right: 16px;
+                height: 100%;
+                background: url('./images/icons/arrow-dropdown.svg') no-repeat center;
+    
+                b {
+                    display: none;
+                }
+            }
+            
+        }
+    }
+
+
+}
+
+.select2-dropdown {
+    background: #3D3D3D;
+    border-radius: var(--radius-standard) !important;
+    border: 1px solid #969696;
+    margin-top: 8px;
+
+    .select2-results>.select2-results__options {
+        overflow: visible;
+
+        .simplebar-content-wrapper {
+            border-radius: 32px;
+        }
+
+        .simplebar-content {
+            .select2-results__option {
+                opacity: 1;
+            }
+        }
+    }
+
+    .select2-results__option {
+        opacity: 0;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        color: var(--color-white);
+        padding: 16px;
+        
+        &--selected,
+        &--selectable {
+            background: transparent !important;
+        }
+
+        &--highlighted {
+            background: #969696 !important;
+            color: #151515 !important;
+        }
+    }
+}

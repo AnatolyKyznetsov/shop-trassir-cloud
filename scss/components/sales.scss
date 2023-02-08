@@ -1,0 +1,66 @@
+.sales {
+    &__wrapper {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    .picture-card {
+        &:nth-child(7n+1) {
+            background-image: url('./images/sales/sale_1.png');
+        }
+    
+        &:nth-child(7n+2) {
+            background-image: url('./images/sales/sale_2.png');
+        }
+    
+        &:nth-child(7n+3) {
+            max-width: 596px;
+            width: 100%;
+            background-image: url('./images/sales/sale_3.png');
+        }
+    
+        &:nth-child(7n+4) {
+            background-image: url('./images/sales/sale_4.png');
+        }
+    
+        &:nth-child(7n+5) {
+            background-image: url('./images/sales/sale_5.png');
+        }
+    
+        &:nth-child(7n+6) {
+            background-image: url('./images/sales/sale_6.png');
+        }
+    
+        &:nth-child(7n+7) {
+            background-image: url('./images/sales/sale_7.png');
+        }    
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .sales {
+        .picture-card {
+            &:nth-child(7n+3) {
+                order: -1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .sales {
+        .picture-card {
+            width: calc(50% - 8px);
+
+            &:nth-child(7n+3) {
+                width: 100%;
+                order: unset;
+            }
+        }
+
+        &__wrapper {
+            gap: 16px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.counter {
+    display: flex;
+    gap: 8px;
+    width: 139px;
+    flex-shrink: 0;
+    user-select: none;
+    height: 44px;
+
+    &_light {
+        .counter__input {
+            color: var(--color-white);
+        }
+    }
+
+    &__input {
+        @extend .text-standard;
+
+        user-select: none;
+        margin-bottom: 0;
+        outline: none;
+        border: none;
+        text-align: center;
+        background: transparent;
+        color: #151515;
+        width: 100%;
+    }
+
+    .icon-button {
+        font-size: 20px;
+    }
+}

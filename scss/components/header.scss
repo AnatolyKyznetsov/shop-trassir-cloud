@@ -1,0 +1,122 @@
+.header {
+    background: var(--bg-main);
+    padding: 20px 0;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    & + .breadcrumbs,
+    & + .title__main,
+    & + .main {
+        margin-top: 84px;
+    }
+
+    & + .title__main {
+        padding-top: 40px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    &__inner {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin-right: 64px;
+    }
+
+    &__logo {
+        margin-right: 90px;
+        flex-shrink: 0;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__cart {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .header {
+        .container {
+            gap: 16px
+        }
+
+        &.burger-opened {
+
+            .header__wrapper {
+                transform: translateX(0%);
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        &__inner {
+            flex-direction: column-reverse;
+            margin-right: 0;
+            position: static;
+        }
+
+        &__wrapper {
+            transform: translateX(-100%);
+            opacity: 0;
+            pointer-events: none;
+
+            transition: .2s linear;
+            position: fixed;
+            top: 84px;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            background: var(--bg-main);
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            padding-top: 100px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        &__logo {
+            margin-right: 0;
+        }
+
+        &__cart {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .header {
+        & + .breadcrumbs,
+        & + .title__main,
+        & + .main {
+            margin-top: 67px;
+        }
+    
+        &__logo {
+            width: 68px;
+        }
+
+        &__wrapper {
+            top: 67px;
+        }
+    }
+}

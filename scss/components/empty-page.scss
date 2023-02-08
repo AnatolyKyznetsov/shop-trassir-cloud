@@ -1,0 +1,28 @@
+.empty-page {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+
+    &__img {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.33;
+        letter-spacing: 0.02em;
+        text-align: center;        
+        color: #C7C7C7;
+    }
+
+    &__links {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+}

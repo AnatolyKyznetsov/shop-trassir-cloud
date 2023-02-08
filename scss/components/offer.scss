@@ -1,0 +1,136 @@
+.offer {
+    background: var(--bg-second);
+    position: relative;
+
+    &.is-paused {
+        .swiper-pagination-bullet {
+            &.is-next {
+                &:before {
+                    display: none !important;
+                }
+            }   
+        }
+    }
+
+    &__slide {
+        background-color: var(--bg-second);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 107px 0px 113px;
+        // opacity: 0;
+        // transition: .5s linear;
+
+        // &.swiper-slide-active {
+        //     opacity: 1;
+        // }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        max-width: 704px;
+    }
+
+    &__text {    
+        color: #969696;
+        max-width: 704px;
+        margin-bottom: 40px;
+    }
+
+    &__slider-tools {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+
+    &__slider-nav {
+        position: relative;
+        z-index: 11;
+    }
+
+    .swiper-pagination {
+        position: static;
+        display: inline-flex;
+        align-items: center;
+        width: auto;
+
+        .swiper-pagination-bullet {
+            height: 4px;
+            width: 65px;
+            background: rgba(61, 61, 61, 0.5);
+            border-radius: 100px;
+            opacity: 1;
+            transition: .2s linear;
+            position: relative;
+
+            &-active {
+                background: var(--color-conv-lightness);
+            }
+
+            &.is-next {
+                overflow: hidden;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    animation: fill 5s linear;
+                    background: #969696;
+                    border-radius: 100px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .offer {
+        &__slide {
+            background-size: cover;
+        }
+    }
+}
+@media screen and (max-width: $sm) {
+    .offer {
+        &__slide {
+            background-position: center right;
+            padding: 36px 0px 58px;
+        }
+
+        &__title {
+            margin-bottom: 8px;
+        }
+
+        &__text {
+            margin-bottom: 24px;
+        }
+
+        &__slider-nav {
+            display: none;
+        }
+
+        &__slider-tools {
+            bottom: 16px;
+        }
+
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                width: 28px;
+            }
+        }
+    }
+}

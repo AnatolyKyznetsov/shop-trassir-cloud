@@ -1,0 +1,45 @@
+.snippet {
+    @extend .text-standard;
+
+    font-weight: 500;
+    line-height: 1.33;
+    padding: 24px 72px;
+    position: relative;
+    margin: 32px 0;
+    border-radius: var(--radius-standard);
+
+    &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 36px;
+        top: 50%;
+        margin-top: -12px;
+    }
+
+    &_info {
+        background: var(--color-conv-dark);
+        box-shadow: 0px 0px 40px #{HexToRGBA($color-conv-light, 0.08)};
+        border-radius: 32px;
+
+        &::before {
+            background: url('./images/icons/info.svg') no-repeat center;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .snippet {
+        padding: 16px;
+        padding-left: 56px;
+        font-weight: 400;
+        // ???????
+        border-radius: 12px;
+
+        &::before {
+            left: 16px;
+        }
+    }
+}

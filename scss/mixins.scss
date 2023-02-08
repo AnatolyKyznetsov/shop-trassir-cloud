@@ -1,0 +1,26 @@
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder           { @content; }
+    &::-moz-placeholder          { @content; }
+    &:-ms-input-placeholder      { @content; }
+}
+
+@mixin selection {
+    &::selection          { @content; }
+    &:-moz-selection      { @content; }
+    &::-o-selection       { @content; }
+    &:-ms-selection       { @content; }
+    &:-webkit-selection   { @content; }
+}
+
+@mixin font-face($font-family, $url, $weight: 400, $style: normal) {
+    @font-face {
+        font-family: '#{$font-family}';
+        src: url('#{$url}.woff2') format('woff2'),
+        url('#{$url}.woff') format('woff'),
+        url('#{$url}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
